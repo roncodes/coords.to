@@ -1,7 +1,28 @@
-{{page-title "@coordsTo"}}
+{{page-title "cordinates to"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="app-container">
+    <div class="lookup-container">
+        <form>
+            <div class="input-group">
+                <label>Enter coordinates to lookup location</label>
+                <div class="coordinate-input-container">
+                    <Input type="text" value={{this.latitude}} placeholder="Latitude" />
+                    <Input type="text" value={{this.longitude}} placeholder="Longitude" />
+                </div>
+            </div>
+            <div class="input-group for-last-group">
+                <label>Or enter address to lookup coordinates</label>
+                <div class="address-input-container">
+                    <input type="text" value={{this.address}} placeholder="Address" class="w-full" />
+                </div>
+            </div>
+            <div class="input-group for-button">
+                <button type="submit" disabled="true">Go!</button>
+            </div>
+        </form>
+    </div>
 
-{{outlet}}
+    <LeafletMap id="leafletMap" class="map" @lat={{43.659752}} @lng={{-79.378161}} @zoom={{14}} @zoomControl={{false}} as |layers|>
+        <layers.tile @url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png" />
+    </LeafletMap>
+</div>

@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: '@coords-to',
+    modulePrefix: '@coords-to/app',
     environment,
     rootURL: '/',
     locationType: 'auto',
