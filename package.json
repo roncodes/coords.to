@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "simple coordinate & reverse address location lookup",
+  "homepage": "https://coords.to/",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "Ronald A. Richardson <me@ron.dev> (https://ron.dev/)",
   "directories": {
     "doc": "doc",
     "test": "tests"
